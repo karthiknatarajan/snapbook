@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html ng-app="snapbookApp">
+<head>
+    <title>Days</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="width=device-width, initial-scale=1">  <script src="static/1.11.3.jquery.min.js"></script>
+<!--        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">-->
+        <link rel="stylesheet" href="static/Roboto.css">
+        
+<!--        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
+        <link rel="stylesheet" href="static/bootstrap.min.css">
+        
+<!--        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
+        <script src="static/bootstrap.min.js"></script>
+        
+<!--        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.js"></script>-->
+        <script src="static/angular.js"></script>
+<!--    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular-animate.js"></script>-->
+         <script src="static/angular-animate.js"></script>
+        
+        <link rel="stylesheet" href="css/header.css" type="text/css"/>
+        <link rel="stylesheet" href="bootstrap-login-forms/form-1/assets/font-awesome/css/font-awesome.min.css">
+        
+        <link rel="stylesheet" href="css/abn_tree.css">
+        <script src="js/timeline.js"></script>
+    <script src="js/days.js"></script>
+</head>
+<body ng-controller="dayController as dayCtrl" oncontextmenu="return false">
+<style>
+   .fixed-panel {
+             height: 90px;
+   }
+     ul {         
+          padding:0 0 0 0;
+          margin:0 0 0 0;
+      }
+      ul li {     
+          
+          list-style:none;          
+      }
+    
+      ul li img {
+          cursor: pointer;
+      }
+</style>
+    
+    <div class="container">
+<!--
+        <div class="panel panel-default" >
+            <div class="panel-body fixed-panel">
+
+            sdfsdfsdfsd
+                <br>fsdfsd
+            </div>
+        </div>
+        <div class="panel panel-default" >
+            <div class="panel-body fixed-panel">
+
+            sdfsdfsdfsd
+                <br>fsdfsd
+            </div>
+        </div>
+        <div class="panel panel-default" >
+            <div class="panel-body fixed-panel">
+
+            sdfsdfsdfsd
+                <br>fsdfsd
+            </div>
+        </div>
+        <div class="panel panel-default" >
+            <div class="panel-body fixed-panel">
+
+            sdfsdfsdfsd
+                <br>fsdfsd
+            </div>
+        </div>
+        <div class="panel panel-default" >
+        <div class="panel-body fixed-panel">
+
+            sdfsdfsdfsd
+                <br>fsdfsd
+            </div>
+        </div>
+    
+-->
+<!--
+        <div class="panel panel-default" ng-repeat="days in dayCtrl.dayData">
+            <div class="panel-body">
+                {{days.label}}
+                <ul class="row">
+                    <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4" ng-repeat="image in days.images">
+                        <img ng-src={{image.src}} class="align-center img-responsive img">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+-->
+        <day-view day-data="day_data"></day-view>
+    </div>
+    
+</body>
+</html>

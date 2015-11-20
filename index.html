@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html ng-app="snapbookApp">
+    <head>
+        <meta charset="UTF-8">
+        <title>Snapbook</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">  <script src="static/1.11.3.jquery.min.js"></script>
+<!--        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">-->
+        <link rel="stylesheet" href="static/Roboto.css">
+        
+<!--        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
+        <link rel="stylesheet" href="static/bootstrap.min.css">
+        
+<!--        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
+        <script src="static/bootstrap.min.js"></script>
+        
+<!--        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.js"></script>-->
+        <script src="static/angular.js"></script>
+<!--    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular-animate.js"></script>-->
+         <script src="static/angular-animate.js"></script>
+        
+        <link rel="stylesheet" href="css/header.css" type="text/css"/>
+        <link rel="stylesheet" href="bootstrap-login-forms/form-1/assets/font-awesome/css/font-awesome.min.css">
+        
+        <link rel="stylesheet" href="css/abn_tree.css">
+        <script src="js/timeline.js"></script>
+        
+       <style>
+    ul {         
+          padding:0 0 0 0;
+          margin:0 0 0 0;
+      }
+      ul li {     
+          
+          list-style:none;          
+      }
+    
+      ul li img {
+          cursor: pointer;
+      }
+
+
+.monthDiv{
+        text-align: center;
+    }
+    .monthImgDiv {position: relative;} 
+.monthImgDiv .monthImgDetailDiv {position: absolute; z-index: 1; bottom: 0; left: 0; right: 0;}
+    .img{
+        opacity: 0.6;
+    }
+    .divtext{
+        text-align: center;
+    }
+</style> 
+        <!--[if lt IE 9]>
+<script src="js/html5_shiv.js"></script>
+<![endif]-->
+
+    </head>
+    <body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Brand</a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</div>
+
+<div class="container-fluid" ng-controller="snapbookController as snapCtrl">
+      <div class="row row-offcanvas row-offcanvas-left">
+
+        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5 sidebar-offcanvas" id="sidebar" role="navigation">
+            <section class="tab" ng-controller="TabController as tab">
+            <ul class="nav nav-pills">
+          <li ng-class="{ active : tab.isSet(1) }" >
+            <a href ng-click="tab.setTab(1)">Timeline</a></li>
+          <li ng-class="{ active : tab.isSet(2) }" >
+            <a href ng-click="tab.setTab(2)">Album</a></li>
+        </ul>
+        <div ng-show="tab.isSet(1)">
+            <br>
+            <span ng-if="doing_async">...loading...</span>
+          <time-tree tree-data="my_data" tree-control="my_tree" on-select="my_tree_handler(branch)" expand-level="2" ></time-tree>
+        </div>
+                
+        <div ng-show="tab.isSet(2)">
+          <h4>Specs</h4>
+          <blockquote>Shine: </blockquote>
+        </div>
+      </section>
+            
+          
+            
+        </div><!--/span-->
+        <div class="col-xs-12 col-sm-9 content">
+            
+          <p class="pull-left">
+               
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle
+              </button>
+          </p>
+            <div style="width:300px" class="alert alert-warning">{{ output }}</div>
+       
+            <month-view month-data=monthdata></month-view>
+            </div><!--/span-->
+
+      </div><!--/row-->
+
+</div><!-- /.container -->
+  </body>
+    <script type="text/javascript" src="js/app.js"></script>
+</html>

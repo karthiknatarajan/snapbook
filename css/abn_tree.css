@@ -1,0 +1,121 @@
+/* 
+   time-tree.css
+
+   style for the angular-bootstrap-nav-tree
+   for both Bootstrap 2 and Bootstrap 3
+
+*/
+
+
+
+/* ------------------------------------------
+AngularJS Animations...
+
+The first selector is for Angular 1.1.5
+The second selector is for Angular 1.2.0
+
+*/
+.time-tree-animate-enter,
+li.time-tree-row.ng-enter {
+  transition: 200ms linear all;
+  position: relative;
+  display: block;
+  opacity: 0;
+  max-height:0px;
+}
+.time-tree-animate-enter.time-tree-animate-enter-active,
+li.time-tree-row.ng-enter-active{
+  opacity: 1;
+  max-height:30px;
+}
+
+.time-tree-animate-leave,
+li.time-tree-row.ng-leave {
+  transition: 200ms linear all;
+  position: relative;
+  display: block;
+  height:30px;
+  max-height: 30px;
+  opacity: 1;
+}
+.time-tree-animate-leave.time-tree-animate-leave-active,
+li.time-tree-row.ng-leave-active {  
+  height: 0px;
+  max-height:0px;
+  opacity: 0;
+}
+
+
+/* 
+------------------------------------------
+Angular 1.2.0 Animation 
+*/
+
+
+.time-tree-animate.ng-enter{
+
+}
+.time-tree-animate.ng-enter{
+
+}
+
+
+
+
+/*
+   end animation stuff
+-----------------------------------------
+   begin normal css stuff
+*/
+ul.time-tree li.time-tree-row {  
+  padding: 0px;
+  margin:0px;
+}
+
+ul.time-tree li.time-tree-row a {
+  padding: 3px 10px;
+}
+
+ul.time-tree i.indented {
+  padding: 2px;
+}
+
+.time-tree {
+  cursor: pointer;
+}
+ul.nav.time-tree .level-1 .indented {
+  position: relative;
+  left: 0px;
+}
+ul.nav.time-tree .level-2 .indented {
+  position: relative;
+  left: 20px;
+}
+ul.nav.time-tree .level-3 .indented {
+  position: relative;
+  left: 40px;
+}
+ul.nav.time-tree .level-4 .indented {
+  position: relative;
+  left: 60px;
+}
+ul.nav.time-tree .level-5 .indented {
+  position: relative;
+  left: 80px;
+}
+ul.nav.time-tree .level-6 .indented {
+  position: relative;
+  left: 100px;
+}
+ul.nav.nav-list.time-tree .level-7 .indented {
+  position: relative;
+  left: 120px;
+}
+ul.nav.nav-list.time-tree .level-8 .indented {
+  position: relative;
+  left: 140px;
+}
+ul.nav.nav-list.time-tree .level-9 .indented {
+  position: relative;
+  left: 160px;
+}

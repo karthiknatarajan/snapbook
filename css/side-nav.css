@@ -1,0 +1,12 @@
+
+.navbarside-toggle {
+  float: left;
+  margin-left: 15px;
+}
+
+@media (min-width: 0) {
+  .navbarside-toggle {
+    display: block; /* force showing the toggle */
+  }
+}
+

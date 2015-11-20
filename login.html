@@ -1,0 +1,96 @@
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+
+</title>
+
+    <meta http-equiv=“X-UA-Compatible” content=“IE=8” />
+</head>
+<body>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+   
+
+
+        
+        <div class="wrapper">
+            <header class="topheader">
+                <div class="headerlogo"></div>
+                <div class="headerborder"></div>
+                
+                <a id="Menu1_SkipLink"></a>
+            </header>
+
+            <div class="bodycontainer">
+
+                
+            <header class="bpmoHead">
+                    <a href="javascript:void(0)" class="left">
+                        <img src="images/logo.png" alt="BPMO Logo" /></a>
+                    
+                    <section class="clear"></section>
+
+                </header>
+                   
+
+                    <div style="width: 100%; position: absolute;">
+                        
+    <link href="css/login.css" rel="stylesheet" />
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript">
+
+        function validate(txtuser, txtpwd) {
+
+            var username = document.getElementById(txtuser).value;
+            var pwd = document.getElementById(txtpwd).value;
+
+            if (username == "") {
+                alert("Please Enter User name");
+                return false;
+            }
+            if (pwd == "") {
+                alert("Please Enter Password");
+                return false;
+            }
+        }
+
+</script>
+    <br />
+        <br />
+        <br />
+    <div class="loginform cf" style=" margin-left: auto ; margin-right: auto ;">
+        
+	<form name="login" action="index_submit" method="POST" accept-charset="utf-8">{% csrf_token %}
+
+		<ul>
+            <li>
+				<label for="usermail">Username</label>
+				 <input type='text' name='Username' id='username' style="font-family:Verdana;font-size:XX-Small;font-weight:bold;width:139px;" />
+             
+			</li>
+			<li>
+				<label for="password">Password</label>
+				 <input type='password' name='Password' id='password' style="font-family:Verdana;font-size:XX-Small;font-weight:bold;width:137px;" />
+			<li>
+				 <input type='submit' value='login'  style="width:75px;" />
+			</li>
+		</ul>
+	</form>
+        
+       
+        <br />
+         <span id="ContentPlaceHolder1_lblerror" style="color:Red;"></span>  
+</div>
+  
+
+                    </div>
+
+
+                </div>
+           
+        </div>
+</body>
+</html>

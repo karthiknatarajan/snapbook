@@ -1,0 +1,743 @@
+@charset "utf-8";
+/* CSS Document for BPMO Dashboard */
+
+/* Required styles from Reset.css and Normalize.css */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,  figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+{
+    padding:0;
+    margin:0;
+	border: 0;
+}
+
+ol, ul{
+	list-style:none;
+}
+@font-face{
+	font-family:"FocoLight";
+	src:url("../fonts/FocoLight.eot?#iefix");
+	src:url("../fonts/FocoLight.eot?#iefix") format("eot"),
+		url("../fonts/FocoLight.woff") format("woff"),
+		url("../fonts/FocoLight.ttf") format("truetype")
+}
+/*--------------------------Global Styles----------------------------*/
+body {
+	font-family:"FocoLight";
+}
+.left{
+	float: left;
+}
+.right{
+	float: right !important;
+    height: 20px;
+}
+.legendlist {
+    width:100px;
+}
+    .legendlist .legend {
+        display: inline-block;
+	width: 10px;
+	height: 10px;
+	margin-right: 5px;
+	padding: 0;
+	margin-top: 2px;
+	border: none;
+	text-align: left;
+    }
+
+      .legendlist   .label {
+  border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    position: relative; 
+    font-family: Calibri;
+    font-size:14px;
+    text-align: center;
+    top: -1px;
+    left: -5px;
+}
+      .labelLegend{
+  border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    font-weight:bold;
+    position: relative; 
+    font-family: Calibri;
+    font-size:14px;
+    text-align: center;
+    top: -1px;
+    left: -5px;
+}
+.clear{
+	clear: both;
+}
+
+.block{
+	display:block;
+}
+.hide{
+	display: none !important;
+}
+
+.row:before,
+.row:after {
+  display: table;
+  content: " ";
+}
+
+.row:after {
+  clear: both;
+}
+a{
+	text-decoration:none;
+	color:#fff
+}
+a:visited{
+	color:#fff;
+}
+input[type="radio"] {
+	padding: 0;
+	margin: 0px 6px 1px 2px;
+	vertical-align: middle;
+	outline: none;
+}
+
+ul li{
+	cursor:pointer;
+}
+
+/*--------------------------Global Styles Ends----------------------------*/
+/* ---- Changes on 01/30/2015 start ---- */
+.wrapper{
+	background: #f0f1f3;
+	padding: 0% 0%;
+	position: relative;
+	margin: 0 auto;
+}
+/* ---- Changes on 01/30/2015 end ---- */
+.bpmoHead{
+	color: #000;
+	font-family: "FocoLight";
+	font-size: 24px;
+	padding: 1% 1% 1% 2%;
+}
+
+.bpmoHead span{
+	padding: 0% 0 0 0;
+}
+
+.bpmoHead span.normalFont{
+	font-weight:normal;
+}
+
+.bpmoHead ul{
+	font-family: Arial;
+	padding: 0% 1% 0 0;
+	max-width: 50%;
+	margin-top: -2px;
+}
+
+.bpmoHead ul li{
+	display:inline;
+	font-size: 14px;
+	padding-left: 5px;
+	font-family: Arial;
+	color: #000;
+}
+.bpmoHead ul li.first{
+	display:inline;
+	padding-right: 25px;
+    font-size:small;
+}
+.bpmoHead ul li a {
+	color: #000;
+}
+
+/***03/26/2015 Dynamic Menu***/
+.mainNav{
+	background:#5F78BA;
+	width:97.2%;
+	padding-left: 1.8%;
+	padding-right: 1%;
+}
+
+.mainNav ul{
+	width:100%;
+}
+
+.mainNav ul li{
+	display:inline-block;
+	color:#fff;
+	text-align:center;
+	line-height:36px;
+	padding:0 50px 0 70px;
+}
+
+.mainNav ul li.active{
+	display:inline-block;
+	background: #7BC144;
+	cursor:pointer;
+	text-align:center;
+	
+}
+
+.mainNav ul li.enroll{
+	background:url("../images/menu_icon/enroll.png") no-repeat 35px 5px;
+}
+
+.mainNav ul li.claims{
+	background:url("../images/menu_icon/claims.png") no-repeat 35px 5px;
+}
+
+.mainNav ul li.provider{
+	background:url("../images/menu_icon/provider.png") no-repeat 35px 5px;
+}
+
+.mainNav ul li.finance{
+	background:url("../images/menu_icon/finance.png") no-repeat 38px 5px;
+}
+
+.mainNav ul li.medical_mgmt{
+	background:url("../images/menu_icon/medical_mgmt.png") no-repeat 35px 5px;
+}
+
+.mainNav ul li.enroll.active, .mainNav ul li.enroll.active:hover{
+	background:url("../images/menu_icon/enroll.png") #7BC144 no-repeat 35px 5px;
+}
+
+.mainNav ul li.claims.active, .mainNav ul li.claims.active:hover{
+	background:url("../images/menu_icon/claims.png") #7BC144 no-repeat 35px 5px;
+}
+
+.mainNav ul li.provider.active, .mainNav ul li.provider.active:hover{
+	background:url("../images/menu_icon/provider.png") #7BC144 no-repeat 35px 5px;
+}
+
+.mainNav ul li.finance.active, .mainNav ul li.finance.active:hover{
+	background:url("../images/menu_icon/finance.png") #7BC144 no-repeat 38px 5px;
+}
+
+.mainNav ul li.medical_mgmt.active,.mainNav ul li.medical_mgmt.active:hover{
+	background:url("../images/menu_icon/medical_mgmt.png") #7BC144 no-repeat 35px 5px;
+}
+
+.mainNav ul li.enroll:hover{
+	background:url("../images/menu_icon/enroll.png") #0da2c3 no-repeat 35px 5px;
+}
+
+.mainNav ul li.claims:hover{
+	background:url("../images/menu_icon/claims.png") #0da2c3 no-repeat 35px 5px;
+}
+
+.mainNav ul li.provider:hover{
+	background:url("../images/menu_icon/provider.png") #0da2c3 no-repeat 35px 5px;
+}
+
+.mainNav ul li.finance:hover{
+	background:url("../images/menu_icon/finance.png") #0da2c3 no-repeat 38px 5px;
+}
+
+.mainNav ul li.medical_mgmt:hover{
+	background:url("../images/menu_icon/medical_mgmt.png") #0da2c3 no-repeat 35px 5px;
+}
+
+input{
+	width: 26%;
+	margin-right: 2%;
+	font-size: 0.9em;
+	color: #525252;
+	font-family: Calibri;
+	padding: 1% 0% 1% 1%;
+	border: 1px solid #dcdcde;
+	outline: none;
+}
+
+.zebraTable{
+	font-size:0.9em;
+	font-family:Calibri;
+	color:#454f55;
+	width: 100%;
+	border-left: 1px solid #ffffff;
+	border-top: 1px solid #ffffff;
+	border-collapse:collapse;
+}
+
+.zebraTable tr th, .zebraTable tr td{
+	padding: 18px 17px;
+	border-top: 1px solid #ffffff;
+	border-bottom: 1px solid #ffffff;
+	text-align:left;
+	border-collapse:collapse;
+}
+
+.zebraTable thead{
+	text-align: left;
+	background: #e3eaf3;
+	width: 100%
+}
+
+.zebraTable tbody{
+	border:1px solid #ffffff;
+}
+
+.zebraTable tbody tr:nth-child(odd){
+	background-color:transparent;
+	border-bottom:1px solid #ffffff;
+}
+
+.zebraTable tbody tr:nth-child(even){
+	background-color:transparent;
+	border-bottom:1px solid #ffffff;
+}
+
+.zebraTable tbody tr{
+	background-color:transparent;
+}
+
+
+.zebraTable tbody tr span{
+	padding-left:20px;
+}
+
+
+.zebraTable tbody tr td a{
+	color:#0084d7;
+	text-decoration: underline;
+}
+
+.mainContent{
+	background: #fbfbfc;
+	padding: 0;
+	min-height: 400px;
+}
+.mainContent .companyFilterHold{
+	background-color: #e3eaf3;
+	padding: 1% 2%;
+	border-top: 3px solid #fff;
+	border-bottom: 3px solid #fff;
+}
+.mainContent .companyFilterHold .selectCompany{
+	width: 50%;
+}
+
+.selectCompany label{
+	padding-right: 5%;
+	font-family: Calibri;
+	font-size: 16px;
+	color: #525252;
+}
+
+.selectCompany select{
+	width: 26%;
+}
+
+.viewTabs{
+	padding:1% 2%;
+}
+
+.viewTabs .viewTabContents{
+	min-height: 350px;
+	width: 99.85%;
+	/*border:1px solid #fff;*/
+	background:#e3eaf3;
+}
+
+.viewSectionTab a .businessTab, .viewSectionTab a .operationalTab{
+  background: none;
+  font-size: 16px;
+  font-family: Calibri;
+  color: #454f55;
+  width: 180px;
+  height: 24px;
+  border: 1px solid #4F719D;
+  text-align: center;
+  line-height:24px;
+  cursor: pointer;
+}
+
+.viewSectionTab a .businessTab.active, .viewSectionTab a .operationalTab.active{
+  font-size: 16px;
+  font-family: Calibri;
+  width: 180px;
+  height: 25px;
+  background: url("../images/tab_arrow_up.png") #4F719D no-repeat center 19px;
+  border: 1px solid #4F719D;
+  border-bottom: none;
+  color: #fff;
+  text-align: center;
+  line-height: 24px;
+  cursor: pointer;
+}
+.viewSectionTab a .businessTab{
+  border-right: 1px solid #4F719D;
+}
+
+.mainContentHeader .right{
+	margin-top:0.5%;
+}
+
+.mainContentHeader h1{
+	font-family:"FocoLight";
+	font-size:1.5em;
+	color: #000000;
+	font-weight:normal;
+}
+
+.mainContentHeader a{
+	color: #0084D7;
+	padding: 0 0 0 40%;
+	font-size: 0.8em;
+	font-family: "FocoLight";
+}
+.mainContentHeader a.first{
+	margin: 0 -20%;
+	padding: 0;
+}
+.bpmoFoot{
+	color:#000;
+	font-family: Calibri;
+	font-size:0.8em;
+	font-weight:bold;
+	padding: 1.5% 0 1% 1%;
+}
+
+.mainContent select {
+	outline: none;
+	border: none;
+	border: 1px solid #d1d1d1;
+	color:#65646a;
+	height: 24px;
+	line-height:28px;
+	background-color: #ffffff;
+}
+
+.businessView, .operationalView{
+	display:none;
+	padding: 0.5%;
+}
+
+.businessView.active, .operationalView.active{
+	display:block;
+}
+
+.businessView .durationFilterHold, .operationalView .durationFilterHold{
+	padding: 1% 2%;
+}
+.businessView .durationFilterHold .selectDuration, .operationalView .durationFilterHold .selectDuration{
+	width: 50%;
+}
+
+.selectDuration label{
+	padding-right: 5%;
+	font-family: Calibri;
+	font-size: 16px;
+	color: #525252;
+}
+
+.selectDuration select{
+	width: 26%;
+}
+
+.businessView  .businessTableHold, .operationalView .operationalTableHold{
+	width:96%;
+	margin:0 auto;
+	margin-bottom: 20px;
+	background-size:cover;
+}
+
+.businessView .legendTableHold {
+	width:85%;
+	margin:0 auto;
+	background-size:cover;
+}
+
+.businessView .statTableHold {
+	width:100%;
+	margin:0 auto;
+	background-size:cover;
+}
+.bpmoHead .first{
+	background: url("../images/User.png") no-repeat;
+	padding-left:20px;
+}
+
+.bpmoHead .logout{
+	background: url("../images/Logout.png") no-repeat;
+	padding-left:20px;
+    font-size:small;
+}
+
+.businessTable tr td.firstcolumn{
+	background:#4F719D ;
+	width:20%;
+	color:#fff;
+      font-size: 16px;
+  font-family: Calibri;
+}
+
+.businessTableHead{
+	background: #4F719D ;
+	color: #fff;
+	text-align: center;
+	border-left: 1px solid #fff;
+	border-right:1px solid #fff;
+	font-family: Calibri;
+	font-size: 18px;
+	line-height: 30px;
+}
+
+.businessTable tr td div{
+	width:33%;
+	text-align:center;
+}
+
+.businessTable tr td div span{
+	border: 2px solid #4F719D;
+	padding: 1px 10px;
+	display:inline-block;
+	width: 56%;
+	cursor:pointer;
+}
+
+.businessTable tr td.special{
+	padding:5px 17px;
+}
+
+.businessTable tr td.special div.firstItem, .businessTable tr td.special div.secondItem{
+	margin:13px 0;
+}
+
+.businessTable tr td.special div.thirdItem span.first{
+	margin-bottom:7px;
+}
+
+.operationalTableHold .businessTable tr td.firstcolumn{
+	background:none ;
+	width:20%;
+	color:#525252;
+	border-right:1px solid #fff;
+	font-weight:bold;
+	font-size:16px;
+}
+
+.businessTable tr td .legend{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	margin-right: 5px;
+	padding: 0;
+	margin-top: 2px;
+	border: none;
+	text-align: left;
+	
+}
+
+.businessTable tr td div span .label {
+  border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    font-weight :bold;
+    position: relative; 
+    font-family: Calibri;
+    font-size:11px;
+    text-align: center;
+    top: -1px;
+    left: -5px;
+}
+
+.yellow{
+	background:#F93;
+}
+
+.red{
+	background:#F03;
+}
+
+.green{
+	background:#3F3;
+}
+
+.operationalTableHold .businessTable tr td .legend{
+	border-radius: 0;
+}
+
+.rgview {
+}
+
+.rgview table {
+
+}
+
+.rgview th, .rgview td {
+    padding: 4px 4px;
+    height:25px;
+    width:20%;
+    text-align:center;
+}
+
+
+
+.rgview td:hover {
+    background: #ccc;
+}
+
+.rgview td:hover a:active {
+    background: #ccc;
+    overflow-y: scroll;
+}
+
+.rgview td {
+    height:23px;
+    width:20%;
+}
+
+
+.legendTable {
+    width:50%;
+   
+}
+.legendTable tr td.firstcolumn{
+    background:#4F719D;
+	width:2%;
+    height:20px;
+    text-align:center;
+	color:#fff;
+}
+
+.legendTableHead{
+	background: #4F719D ;
+	color: #fff;
+	text-align: center;
+	border-left: 1px solid #fff;
+	border-right:1px solid #fff;
+	font-family: Calibri;
+	font-size: 18px;
+	line-height: 30px;
+}
+
+.legendTable tr td {
+	text-align:center;
+	width:5%;
+    height:2px
+}
+
+.legendTable tr td span{
+	border: 2px solid #4F719D;
+	padding: 1px 10px;
+	display:inline-block;
+	width: 56%;
+	cursor:pointer;
+}
+
+.legendTable tr td.special div.firstItem{
+    background:#4F719D ;
+		width:5%;
+        height:2px;
+    text-align: left;
+}
+
+.legendTable tr td .legend{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	margin-right: 5px;
+	padding: 0;
+	margin-top: 2px;
+	border: none;
+	text-align: left;
+	border-radius: 50%;
+}
+
+.legendPanel {  
+   margin:  auto;
+
+    }
+
+.statTable {
+    margin-left:13px;
+    margin-top:10px;
+    width:45%;
+    border:solid;
+    border-width:1px;
+    border-color:silver;
+  
+}
+.statTable tr td.firstcolumn{
+    background:#4F719D;
+    height:30px;
+    text-align:center;
+	color:#fff;
+    width:11%;
+    font-size:12px;
+}
+
+.statTable tr td.commonColumn{
+    background:#4F719D;
+    height:30px;
+    text-align:center;
+	color:#fff;
+    font-size:12px;
+}
+
+
+.statTableHead{
+	background: #4F719D ;
+	color: #fff;
+	text-align: center;
+	border-left: 1px solid #fff;
+	border-right:1px solid #fff;
+	font-family: Calibri;
+	font-size: 18px;
+	line-height: 30px;
+}
+
+.statTable tr td {
+	text-align:center;
+	width:7%;
+    height:2px
+}
+
+.statTable tr td span{
+
+	padding: 1px 10px;
+	display:inline-block;
+	width: 57%;
+}
+
+.statTable tr td.special div.firstItem{
+    background:#4F719D ;
+		width:5%;
+        height:2px;
+    text-align: left;
+}
+
+.statTable tr td .legend{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	margin-right: 5px;
+	padding: 0;
+	margin-top: 2px;
+	border: none;
+	text-align: left;
+	
+}
+
+    .statTable tr td .label {
+        font-weight: bold;
+        position: relative;
+        font-family: Calibri;
+        text-align: left;
+        font-size:12px;
+}
+
+
+#canvas {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    pointer-events: none;
+}
